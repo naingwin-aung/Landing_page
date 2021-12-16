@@ -1,10 +1,13 @@
 .header {
-    nav {
-        padding: 17px 24px;
+    nav{
+        position: relative;
+        background-color: $white;
+        padding-top: 17px;
+        padding-bottom: 17px;
     }
 
     &.open {        
-        .header__menu {
+        .header__toggle {
             span:first-child {
                 transform: rotate(45deg);
             }
@@ -26,7 +29,7 @@
         }
     }
 
-    &__menu {
+    &__toggle {
         span {
             display: block;
             width: 26px;
@@ -85,13 +88,34 @@
             opacity: 0.75;
         }
     }
+
+    &__menu {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        // margin-left: 20px;
+        margin-top: 20px;
+        background-color: $white;
+        padding: 26px;
+        border-radius: 5px;
+
+        a {
+            color: $darkBlue;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+    }
 }
 
 .overlay {
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    top: 60px;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
