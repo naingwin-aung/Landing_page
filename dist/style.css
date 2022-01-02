@@ -76,21 +76,29 @@ body.no-scroll {
   overflow: hidden;
 }
 
+h1, h2, h3 {
+  margin-top: 0;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
 .container {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-top: 2.25rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
 }
 
 button, .button {
+  display: inline-block;
   padding: 14px 35px;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border: 0;
   border-radius: 50px;
+  font-size: 0.875rem;
   cursor: pointer;
   outline: none;
   color: white;
@@ -211,8 +219,6 @@ button, .button {
 }
 
 .header__cta {
-  font-size: 0.875rem;
-  color: white;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
@@ -225,6 +231,7 @@ button, .button {
   visibility: hidden;
   opacity: 0;
   position: absolute;
+  z-index: 1000;
   width: calc(100% - 3rem);
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -252,5 +259,55 @@ button, .button {
   bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
   background: linear-gradient(#2d314d, transparent);
+}
+
+.hero__image {
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  background-image: url("/images/image-mockups.png");
+  background-size: 89%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 90%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-weight: 300;
+  color: #2d314d;
+  line-height: 1.15;
+  font-size: 37px;
+  margin-bottom: 1.5rem;
+}
+
+.hero__text p {
+  line-height: 1.15;
+  margin-bottom: 2.25rem;
+  color: #8994a9;
+}
+
+.hero__cta {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero__cta:hover {
+  opacity: 0.75;
 }
 /*# sourceMappingURL=style.css.map */

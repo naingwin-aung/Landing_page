@@ -80,8 +80,6 @@
     }
 
     &__cta {
-        font-size: $font-sm;
-        color: $white;
         transition: opacity 0.3s ease-in-out;
 
         &:hover {
@@ -93,6 +91,7 @@
         visibility: hidden;
         opacity: 0;
         position: absolute;
+        z-index: 1000;
         width: calc(100% - 3rem);
         left: 50%;
         transform: translateX(-50%);
