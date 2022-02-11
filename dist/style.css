@@ -307,8 +307,18 @@ button, .button {
   }
 }
 
+.hero__image {
+  text-align: center;
+}
+
 .hero__image img {
   height: 27rem;
+}
+
+@media screen and (max-width: 640px) {
+  .hero__image img {
+    height: 17rem;
+  }
 }
 
 @media screen and (min-width: 992px) {

@@ -8,12 +8,19 @@
     }
 
     &__image {
+        text-align: center;
         img {
             height: 27rem;
+            
+            @media screen and (max-width: 640px) {
+                height: 17rem;
+            }
         }
         @media screen and (min-width: 992px) {
             order: 2;
         }
+
+        
     }
     &__text {
         @media screen and (min-width: 992px) {
