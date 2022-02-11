@@ -85,10 +85,41 @@ a, a:visited, a:hover {
 }
 
 .container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container--pall {
   padding-top: 2.25rem;
   padding-right: 1.5rem;
   padding-bottom: 2.25rem;
   padding-left: 1.5rem;
+}
+
+.container--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.container--px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container--pt {
+  padding-top: 2.25rem;
+}
+
+.container--pr {
+  padding-right: 1.5rem;
+}
+
+.container--pl {
+  padding-left: 1.5rem;
+}
+
+.container--pb {
+  padding-bottom: 2.25rem;
 }
 
 button, .button {
@@ -261,31 +292,44 @@ button, .button {
   background: linear-gradient(#2d314d, transparent);
 }
 
-.hero__image {
-  position: relative;
-  background-image: url("/images/bg-intro-mobile.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 17.5rem;
+.hero .container {
+  min-height: 42rem;
 }
 
-.hero__image::before {
-  content: "";
-  position: absolute;
-  background-image: url("/images/image-mockups.png");
-  background-size: 89%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 90%;
-  height: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+@media screen and (min-width: 992px) {
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.hero__image img {
+  height: 27rem;
+}
+
+@media screen and (min-width: 992px) {
+  .hero__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .hero__text {
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .hero__text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
 }
 
 .hero__text h1 {
@@ -296,10 +340,22 @@ button, .button {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (min-width: 992px) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
+}
+
 .hero__text p {
   line-height: 1.15;
   margin-bottom: 2.25rem;
   color: #8994a9;
+}
+
+@media screen and (min-width: 992px) {
+  .hero__text p {
+    font-size: 1.25rem;
+  }
 }
 
 .hero__cta {

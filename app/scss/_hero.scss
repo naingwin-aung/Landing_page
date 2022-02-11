@@ -1,26 +1,26 @@
 .hero {
-    &__image {
-        position: relative;
-        background-image: url("/images/bg-intro-mobile.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        min-height: 17.5rem;
+    .container {
+        @media screen and (min-width: 992px) {
+            display: flex;
+            align-items: center;
+        }
+        min-height: 42rem;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            background-image: url("/images/image-mockups.png");
-            background-size: 89%;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            width: 90%;
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
+    &__image {
+        img {
+            height: 27rem;
+        }
+        @media screen and (min-width: 992px) {
+            order: 2;
         }
     }
     &__text {
+        @media screen and (min-width: 992px) {
+            order: 1;
+            text-align: left;
+        }
+
         text-align: center;
         h1 {
             font-weight: 300;
@@ -28,12 +28,20 @@
             line-height: 1.15;
             font-size: 37px;
             margin-bottom: 1.5rem;
+
+            @media screen and (min-width: 992px) {
+                font-size: $font-xlg;
+            }
         }
 
         p {
             line-height: 1.15;
             margin-bottom: 2.25rem;
             color: $lightGrayishBlue;
+
+            @media screen and (min-width: 992px) {
+                font-size: $font-lg;
+            }
         }
     }
 
