@@ -77,7 +77,22 @@ body.no-scroll {
 }
 
 h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
   margin-top: 0;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-bottom: 1.5625rem;
+}
+
+@media screen and (min-width: 993px) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2,25rem;
+  }
 }
 
 a, a:visited, a:hover {
@@ -292,10 +307,6 @@ button, .button {
   background: linear-gradient(#2d314d, transparent);
 }
 
-.hero .container {
-  min-height: 42rem;
-}
-
 @media screen and (min-width: 992px) {
   .hero .container {
     display: -webkit-box;
@@ -304,6 +315,7 @@ button, .button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    min-height: 35rem;
   }
 }
 
@@ -315,9 +327,27 @@ button, .button {
   height: 27rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 690px) {
   .hero__image img {
     height: 17rem;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .hero__image img {
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 313px) {
+  .hero__image img {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 227px) {
+  .hero__image img {
+    height: 3rem;
   }
 }
 
@@ -375,5 +405,69 @@ button, .button {
 
 .hero__cta:hover {
   opacity: 0.75;
+}
+
+@media screen and (min-width: 993px) {
+  .feature__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 993px) and (min-width: 640px) {
+  .feature__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.feature p {
+  color: #8994a9;
+  margin-bottom: 3.75rem;
+}
+
+@media screen and (min-width: 993px) {
+  .feature p {
+    width: 55%;
+  }
+}
+
+.feature__item {
+  text-align: center;
+  padding: 0.9375rem;
+}
+
+@media screen and (max-width: 993px) and (min-width: 640px) {
+  .feature__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .feature__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: left;
+  }
+  .feature__item:not(last-child) {
+    margin-right: 29px;
+  }
+}
+
+.feature__title {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.feature__description {
+  color: #8994a9;
 }
 /*# sourceMappingURL=style.css.map */

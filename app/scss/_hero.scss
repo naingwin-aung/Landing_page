@@ -3,8 +3,8 @@
         @media screen and (min-width: 992px) {
             display: flex;
             align-items: center;
+            min-height: 35rem;
         }
-        min-height: 42rem;
     }
 
     &__image {
@@ -12,8 +12,20 @@
         img {
             height: 27rem;
             
-            @media screen and (max-width: 640px) {
+            @media screen and (max-width: 690px) {
                 height: 17rem;
+            }
+
+            @media screen and (max-width: 455px) {
+                height: 12rem;
+            }
+
+            @media screen and (max-width: 313px) {
+                height: 8rem;
+            }
+
+            @media screen and (max-width: 227px) {
+                height: 3rem;
             }
         }
         @media screen and (min-width: 992px) {
